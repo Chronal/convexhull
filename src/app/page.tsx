@@ -9,7 +9,6 @@ import {
 	generateRandomPoints,
 } from "@/lib/gfx.ts";
 
-import { vec3 } from "gl-matrix";
 import { useState } from "react";
 
 export default function Visualiser() {
