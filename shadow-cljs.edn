@@ -1,0 +1,31 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["src/cljs"
+  "src/lib"]
+
+ :dependencies
+ [[re-frame "1.4.3"]]
+
+ :dev-http {8000 "public"}
+
+ :builds
+ {:app
+  {:target :browser
+   :output-dir "public/js"
+   :asset-path "js"
+
+   :modules
+   {:main
+    {:init-fn chull.core/run}}
+
+   :build-hooks
+   [(chull.build/webpack)]
+
+   :js-options
+   {:entry-keys ["module" "browser" "main"]
+    :js-provider :external
+    :external-index "index.js"
+    :external-format :esm}
+
+   :compiler-options
+   {:output-feature-set :es-next}}}}

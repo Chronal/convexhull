@@ -1,0 +1,15 @@
+main {
+    display: flex;
+}
+
+h1 {
+}
+
+sidebar {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+#regen-button {
+}

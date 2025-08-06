@@ -1,10 +1,12 @@
-use crate::vec::Vec3;
-
-mod line;
 mod plane;
+mod vec;
+
+pub use vec::Vec3;
+pub type Vertex = Vec3;
+pub type Face = [Vertex; 3];
 
 pub struct Plane {
-    point: Vec3,
+    point: Vertex,
     normal: Vec3,
 }
 
